@@ -1,11 +1,28 @@
 {% extends 'base.html' %}
 
 {% block container %}
-<h2>Welcome!</h2>
-<p>Welcome to the Flask app. This is the home page. Here are a few links to example pages you might find interesting.
-    <ul>
-        <li><a href="{{ url_for('read')}}">a page that displays information pulled from a MongoDB database collection</a></li>
-        <li><a href="{{ url_for('create')}}">a page with a form you can submit to create a new record in a MongoDB collection</a></li>
-    </ul>
+<p>
+    <span style="color: #ff8585;">hi there, we are</span>
 </p>
+<h1>
+    <span style="color: #ff8585;">SWEET SWEAT CHRONICLES</span>
+</h1>
+<p>
+    Inspired by 
+    <span style="color: #ffb2b2;">Haruki Murakami</span> and <span style="color: #ffb2b2;">random workout thoughts</span> 
+    <br><br>
+    You have found the perfect outlet for
+    your spontaneous thoughts 
+    that pop into your head during any workout sesh 
+    - you know, the quirky, the brilliant, 
+    and the totally-unexpected ones.
+    <br><br>
+    Let's check out <br>what I talk about <br>when I talk about 
+        <span style="color: #ffb2b2;">
+            <a href="{{ url_for('read')}}" target="_blank">RUNNING &#8618;</a>
+        </span> 
+    <br>- not by Haruki Murakami 
+    and by <a href="https://www.harukimurakami.com/book/what-i-talk-about-when-i-talk-about-running-a-memoir">Haruki Murakami &#8618;</a> 
+</p>
+
 {% endblock %}

@@ -1,18 +1,21 @@
-{% extends 'base.html' %} {% block container %}
-<h2>Update</h2>
-<p>Edit a record in the MongoDB database collection.</p>
-<form method="POST" action="{{ url_for('edit_post', mongoid=mongoid) }}">
-  <p>
-    Your name:
-    <input type="text" id="fname" name="fname" value="{{doc.name}}" /><br />
-  </p>
-  <p>
-    Message:
-    <textarea id="fmessage" name="fmessage">{{doc.message}}</textarea>
-  </p>
-  <p>
-    <a href="{{ url_for('read')}}">Cancel</a>
-    <input type="submit" name="post-btn" value="Save" />
-  </p>
-</form>
+{% extends 'base.html' %} 
+
+{% block container %}
+  <h1> <a class="arrow" href="{{ url_for('read')}}"> &#8617; </a>Update Thought</h1>
+  <p>Having second thought about your first thought? 
+    As much as we love that fresh and unfiltered first thought of yours,
+    we've got your back.</p>
+  <form method="POST" action="{{ url_for('edit_post', mongoid=mongoid) }}">
+
+    <p>Name<span class="req">*</span>: <input class="new-thought-form" type="text" id="name" name="name" required/><br /></p>    
+    <p>First Run<span class="req">*</span>: <input class="new-thought-form" type="text" id="first_run" name="first_run" placeholder="YYYY" required/><br /></p>
+    <p>Thought<span class="req">*</span>: 
+      <textarea class="new-thought-form" type="text" id="thought" name="thought" required></textarea>
+    </p>
+      <input class="post-button" type="submit" name="post-btn" value="Save" />
+    </p>
+
+  </form>
+
 {% endblock %}
+

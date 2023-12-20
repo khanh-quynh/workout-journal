@@ -1,0 +1,33 @@
+------------ VIRTUAL ENV & RUN APP ------------
+python3 -m venv .venv
+source .venv/bin/activate
+pip3 install -r requirements.txt
+export FLASK_APP=app.py
+export FLASK_ENV=development
+
+flask run -p 5000 (mongo atlas kq)
+flask run -p 5001 (prof web)
+flask run -p 5002 (i6 kq)
+
+------------ GITHUB Token -------------
+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
+
+------------ MONGDDB ATLAS ------------
+mongosh "mongodb+srv://cluster1-sport.nugd7ex.mongodb.net/" --apiVersion 1 --username qkn201
+
+------------ i6 ------------
+ssh qkn201@i6.cims.nyu.edu 
+[i6 password]
+
+module load mongodb-4.0 
+export LC_ALL=en_US.UTF-8
+
+mongoimport --db qkn201 --collection running --host class-mongodb.cims.nyu.edu --username qkn201 --password FoYETSoQ --type json --file running.json
+mongoimport --headerline --type=json --db=qkn201 --collection=running --host=class-mongodb.cims.nyu.edu --file=running.json --username=qkn201; --password=FoYETSoQ
+
+
+$ mongosh qkn201 --host class-mongodb.cims.nyu.edu -u qkn201 -p
+FoYETSoQs
+
+---------- SIDE NOTE -----------
+&#8617; html for arrow
